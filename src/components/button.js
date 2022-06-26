@@ -7,10 +7,11 @@ const Button = ({
     color = 'gray',
     disable = false,
     className = null,
+    onClick = null,
     ...props
 }) => {
     return(
-        <Wrapper width={width} size={size} color={color} disabled={disable} className={className}>
+        <Wrapper onClick={onClick} width={width} size={size} color={color} disabled={disable} className={className}>
             {props.children}
         </Wrapper>
     );
@@ -30,6 +31,8 @@ const Wrapper = styled.button`
     border-radius: 32px;
     cursor: pointer;
     color: ${ props => Color[props.color].text };
+    font-family: myFont;
+    font-size: 24px;
     &:hover{
         background-color: ${ props => Color[props.color].hover };
     }

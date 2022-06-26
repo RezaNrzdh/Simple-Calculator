@@ -8,15 +8,67 @@ import Numpad from './components/numpad';
 
 const App = () => {
 
-    const [result, setResult] = useState();
-    const [memory, setMemory] = useState();
+    const [number, setNumber] = useState(0);
+    const [result, setResult] = useState(0);
+    const [memory, setMemory] = useState(0);
+
+    const SumHandler = () => {
+
+    }
+
+    const SubHandler = () => {
+      
+    }
+
+    const DividedHandler = () => {
+      
+    }
+
+    const MultiHandler = () => {
+      
+    }
+
+    const NumberHandler = (num) => {
+      console.log(num);
+      setNumber(num);
+    }
+
+    const PointHandler = () => {
+
+    }
+
+    const ClearHandler = () => {
+
+    }
+
+    const SaveMemoryHandler = () => {
+
+    }
+
+    const ClearMemoryHandler = () => {
+
+    }
+
+    const ResultHandler = () => {
+
+    }
 
     return(
       <Fragment>
         <GlobalStyle />
         <Container>
-          <Screen />
-          <Numpad />
+          <Screen result={number} />
+          <Numpad 
+            point={PointHandler}
+            clear={ClearHandler}
+            saveMem={SaveMemoryHandler}
+            clearMem={ClearMemoryHandler}
+            num={NumberHandler}
+            sum={SumHandler}
+            sub={SubHandler}
+            divided={DividedHandler}
+            multi={MultiHandler}
+            result={ResultHandler}/>
         </Container>
       </Fragment>
     );
@@ -38,7 +90,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: myFont;
-    src: url('../public/fonts/Ubuntu-Regular.ttf');
+    src: url('fonts/Ubuntu-Regular.ttf');
   }
 `;
 

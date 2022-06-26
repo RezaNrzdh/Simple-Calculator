@@ -1,28 +1,28 @@
 import Button from './button';
 import styled from "styled-components";
 
-const Numpad = () => {
+const Numpad = (props) => {
     return(
         <Wrapper>
-          <Button>C</Button>
-          <Button>MR</Button>
-          <Button>MS</Button>
-          <Button color='orange'>/</Button>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button color='orange'>x</Button>
-          <Button>4</Button>
-          <Button>5</Button>
-          <Button>6</Button>
-          <Button color='orange'>-</Button>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button color='orange'>+</Button>
-          <Button className='zero'>0</Button>
-          <Button>.</Button>
-          <Button color='green'>=</Button>
+          <Button onClick={props.clear}>C</Button>
+          <Button onClick={props.clearMem}>MR</Button>
+          <Button onClick={props.saveMem}>MS</Button>
+          <Button onClick={props.divided} color='orange'>/</Button>
+          <Button onClick={props.num}>7</Button>
+          <Button onClick={props.num}>8</Button>
+          <Button onClick={props.num}>9</Button>
+          <Button onClick={props.multi} color='orange'>x</Button>
+          <Button onClick={props.num}>4</Button>
+          <Button onClick={props.num}>5</Button>
+          <Button onClick={props.num}>6</Button>
+          <Button onClick={props.sub} color='orange'>-</Button>
+          <Button onClick={props.num}>1</Button>
+          <Button onClick={props.num}>2</Button>
+          <Button onClick={props.num}>3</Button>
+          <Button onClick={props.sum} color='orange'>+</Button>
+          <Button onClick={props.num} className='zero'>0</Button>
+          <Button onClick={props.point}>.</Button>
+          <Button onClick={props.result} color='green'>=</Button>
         </Wrapper>
     );
 }
